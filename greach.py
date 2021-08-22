@@ -20,13 +20,29 @@ import joblib
 st.set_page_config(layout='wide')
 
 def main():
-        st.subheader("One reliable place for keeping your documents")
+        st.subheader("A reliable place for keeping your documents save")
         # iris= Image.open('iris.png')
-        data = st.file_uploader('Upload File PDF',type='.pdf')
-        if data == None:
-            st.write('Please choose pdf file to upload')
+        st.write('Upload your National Identification Card') 
+        ktp = st.file_uploader('Upload File',type=['png','jpeg'])
+        if ktp == None:
+            st.write('Please choose file to upload')
         else:
             st.write('File succesfully uploaded')
+        
+        st.write('Upload your Latest Photo') 
+        foto = st.file_uploader('Upload Photo',type=['png','jpeg'])
+        if foto == None:
+            st.write('Please choose file to upload')
+        else:
+            st.write('File succesfully uploaded')
+        
+        st.write('Upload your Transaction records') 
+        data = st.file_uploader('Upload Data',type='xslx')
+        if data == None:
+            st.write('Please choose file to upload')
+        else:
+            st.write('File succesfully uploaded')
+        
   
 if __name__=='__main__':
     main()
