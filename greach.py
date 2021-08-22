@@ -36,6 +36,13 @@ def main():
         else:
             st.write('File succesfully uploaded')
         
+        st.write('Upload your Latest CV') 
+        cv = st.file_uploader('Upload File',type=['pdf','docx'])
+        if cv == None:
+            st.write('Please choose file to upload')
+        else:
+            st.write('File succesfully uploaded')
+        
         st.write('Upload your Transaction records') 
         data = st.file_uploader('Upload Data',type='xslx')
         if data == None:
