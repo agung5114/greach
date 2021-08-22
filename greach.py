@@ -20,7 +20,9 @@ import joblib
 st.set_page_config(layout='wide')
 
 def main():
-        st.subheader("A reliable place for keeping your documents save")
+        greach= Image.open('GReach.png')
+        st.image(greach)
+        st.title("Upload your documents once and use it for multiple program submissions")
         # iris= Image.open('iris.png')
         st.write('Upload your National Identification Card') 
         ktp = st.file_uploader('Upload File',type=['png','jpeg'])
